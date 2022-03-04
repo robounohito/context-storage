@@ -1,0 +1,25 @@
+<ng-container *ngIf="model$ | async as model">
+  <p>page-one works!</p>
+
+  {{ model | json }}
+
+  <br /><br />
+
+  <mat-form-field appearance="fill">
+    <mat-select #select1 [value]="model.select1">
+      <mat-option [value]="1">One</mat-option>
+      <mat-option [value]="2">Two</mat-option>
+      <mat-option [value]="3">Three</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br /><br />
+
+  <mat-form-field>
+    <mat-select #select2 [value]="model.select2">
+      <mat-option [value]="1">One</mat-option>
+      <mat-option [value]="2">Two</mat-option>
+      <mat-option [value]="3">Three</mat-option>
+    </mat-select>
+  </mat-form-field>
+</ng-container>
